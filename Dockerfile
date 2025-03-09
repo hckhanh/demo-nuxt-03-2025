@@ -25,4 +25,4 @@ COPY --from=build /usr/src/app/.output .
 # run the app
 USER bun
 EXPOSE 3000/tcp
-ENTRYPOINT [ "bun", ".output/server/index.mjs" ]
+ENTRYPOINT [ "bun", "server/index.mjs" ]
