@@ -16,7 +16,7 @@ RUN cd /temp/dev && bun install --frozen-lockfile
 FROM base AS build
 COPY --from=install /temp/dev/node_modules node_modules
 COPY . .
-RUN bun build
+RUN bun run build
 
 # copy production dependencies and source code into final image
 FROM base AS release
